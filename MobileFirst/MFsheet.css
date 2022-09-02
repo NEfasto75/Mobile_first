@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+.grid_container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /*1fr 1fr 80px 80px;*/
+    grid-template-rows: 50px auto 225px 50px;
+    justify-content: center;
+    text-align: center;
+    gap: 5px;
+    color: #fff;
+    font-size: 25px;
+}
+.header {
+    background-color: blue;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    padding: 10px;
+}
+.main {
+    background-color: green;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    padding: 10px;
+}
+.section {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    background-color: red;
+    padding: 10px;
+}
+.footer {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    background-color: brown;
+    padding: 10px;
+}
+/*=====Smartphone&tablet=====*/
+@media screen and (min-width: 768px) {
+    .grid_container {
+    grid-template-columns: 1fr 3fr; /*225px 375px*/
+    grid-template-rows: 350px auto 50px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .header {
+        grid-row-start: 1;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+}
+@media screen and (min-width: 768px) {
+    .main {
+        grid-column-start: 2;
+        grid-column-end: -1;
+    }
+}
+@media screen and (min-width: 768px) {
+    .section {
+        grid-column-start: 2;
+        grid-column-end: -1;
+    }
+}
+@media screen and (min-width: 768px) {
+    .footer {
+        grid-column-start: 2;
+        grid-column-end: -1;
+    }
+}
+/* =====For large desktop=====*/
+@media screen and (min-width: 1280px) {
+    .grid_container {
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    }
+} 
+@media screen and (min-width: 1280px) {
+    .header {
+        grid-row-start: 1;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+}
+@media screen and (min-width: 1280px) {
+    .main {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+}
+@media screen and (min-width: 1280px) {
+    .section {
+        grid-row-start: 1;
+        grid-row-end: 4;
+        grid-column-start: 3;
+        grid-column-end: -1;
+    }
+}
+@media screen and (min-width: 1280px) {
+    .footer {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+}
